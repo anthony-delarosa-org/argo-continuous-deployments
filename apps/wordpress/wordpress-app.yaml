@@ -17,7 +17,7 @@ spec:
         - name: service.type
           value: ClusterIP
         - name: mariadb.primary.persistence.enabled
-          value: false
+          value: 'false'
   sources: []
   project: default
   syncPolicy:
