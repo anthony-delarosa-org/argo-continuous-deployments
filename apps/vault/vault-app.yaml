@@ -14,7 +14,7 @@ spec:
     chart: vault
     helm:
       valueFiles:
-      - ./values/vault-values.yaml
+      - values/vault-values.yaml
   sources: []
   project: default
   syncPolicy:
