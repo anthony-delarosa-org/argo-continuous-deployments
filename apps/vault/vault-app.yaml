@@ -14,9 +14,7 @@ spec:
     chart: vault
     helm:
       valueFiles:
-      - values/vault-values.yaml
-    directory:
-      recurse: true
+      - vault-values.yaml
   sources: []
   project: default
   syncPolicy:
