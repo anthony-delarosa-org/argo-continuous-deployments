@@ -10,11 +10,12 @@ spec:
   source:
     path: ''
     repoURL: https://helm.releases.hashicorp.com
-    targetRevision: 0.28.1
+    targetRevision: 0.28.0
     chart: vault
     helm:
-      valueFiles:
-      - vault-values.yaml
+      parameters:
+        - name: ui.enabled
+          value: 'true'
   sources: []
   project: default
   syncPolicy:
