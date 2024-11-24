@@ -11,11 +11,11 @@ spec:
     repoURL: https://github.com/anthony-delarosa-org/argo-continuous-deployments.git
     targetRevision: main
     path: ./apps
+    directory:
+      recurse: true
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
-    directory:
-      recurse: true
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
