@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ghost
+spec:
+  destination:
+    name: ''
+    namespace: ghost
+    server: https://kubernetes.default.svc
+  source:
+    path: ''
+    repoURL: https://charts.bitnami.com/bitnami
+    targetRevision: 22.0.2
+    chart: ghost
+    helm:
+      parameters:
+        - name: service.type
+          value: ClusterIP
+        - name: persistence.enabled
+          value: 'false'
+        - name: mysql.primary.persistence.enabled
+          value: 'false'
+  sources: []
+  project: default
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
